@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ALX4_SWD5_S3_Demos", "ALX4_SWD5_S3_Demos\ALX4_SWD5_S3_Demos.fsproj", "{E33574C0-156D-4682-9329-4BDAA87E7580}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLQuery", "SQLQuery", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		SQLQuery\SQLQuery.ssmssln = SQLQuery\SQLQuery.ssmssln
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day1SQL", "Day1SQL", "{B55ED6CD-3BEE-4E82-96DB-AEEF43E580AB}"
+	ProjectSection(SolutionItems) = preProject
+		SQLQuery\Day1SQL\Day1SQL.ssmssqlproj = SQLQuery\Day1SQL\Day1SQL.ssmssqlproj
+		SQLQuery\Day1SQL\FirstScript.sql = SQLQuery\Day1SQL\FirstScript.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E33574C0-156D-4682-9329-4BDAA87E7580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33574C0-156D-4682-9329-4BDAA87E7580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33574C0-156D-4682-9329-4BDAA87E7580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33574C0-156D-4682-9329-4BDAA87E7580}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B55ED6CD-3BEE-4E82-96DB-AEEF43E580AB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20A84ED0-150E-4A5F-92EA-4D9374B14F81}
+	EndGlobalSection
+EndGlobal
