@@ -5,9 +5,9 @@
 	--1- Writing Simple SELECT Statements.       Done 
 	--2- Eliminating Duplicates with DISTINCT.   Done   
 	--3- Using Column and Table Aliases.         Done 
-	--4- Writing Simple CASE Expressions.         
-	--5- Filter  
-	--6- Sorting 
+	--4- Writing Simple CASE Expressions.        Done       
+	--5- Filter                                  Done
+	--6- Sorting                                 Done
 	--7- Join 
 ---------------------------------------
 --HOL Hand On Lab 
