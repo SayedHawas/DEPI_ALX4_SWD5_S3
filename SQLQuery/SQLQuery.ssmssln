@@ -13,6 +13,8 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Day4DQL", "Day4DQL\Day4DQL.
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Day5SQL", "Day5SQL\Day5SQL.ssmssqlproj", "{7B618B49-82CE-4EF6-ADC6-B6770BCC6693}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Day6SQL", "Day6SQL\Day6SQL.ssmssqlproj", "{A21D128E-8546-4806-92B4-EF6A077B3BC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
@@ -23,7 +25,8 @@ Global
 		{CF513CB2-C5CC-4A31-BF52-5803EABD6939}.Default|Default.ActiveCfg = Default
 		{B096C24B-254A-4DA4-9C79-BF2D77D53CE1}.Default|Default.ActiveCfg = Default
 		{7B618B49-82CE-4EF6-ADC6-B6770BCC6693}.Default|Default.ActiveCfg = Default
-		{FD53F4CB-54EB-4975-B736-79E7D5E5FA67}.Default|Default.ActiveCfg = Default
+		{A190EFE8-0D52-4DD3-A702-0E07CB6CE794}.Default|Default.ActiveCfg = Default
+		{A21D128E-8546-4806-92B4-EF6A077B3BC6}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
