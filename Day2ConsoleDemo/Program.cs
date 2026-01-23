@@ -253,7 +253,6 @@ namespace Day2ConsoleDemo
             //} while (ans == 'y' || ans == 'Y'); 
             #endregion
 
-
             #region Session3
             //Array 
             //int[] x = new int[3];
