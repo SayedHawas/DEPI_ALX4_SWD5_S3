@@ -31,13 +31,14 @@
             button1 = new Button();
             label1 = new Label();
             textBox1 = new TextBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(164, 127);
+            button1.Location = new Point(285, 157);
             button1.Name = "button1";
-            button1.Size = new Size(152, 46);
+            button1.Size = new Size(88, 39);
             button1.TabIndex = 0;
             button1.Text = "Say Hello ";
             button1.UseVisualStyleBackColor = true;
@@ -59,11 +60,21 @@
             textBox1.Size = new Size(240, 27);
             textBox1.TabIndex = 2;
             // 
+            // button2
+            // 
+            button2.Location = new Point(52, 137);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 3;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 246);
+            Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(button1);
@@ -79,5 +90,6 @@
         private Button button1;
         private Label label1;
         private TextBox textBox1;
+        private Button button2;
     }
 }
