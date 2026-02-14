@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Home.html" />
+    <None Include="wwwroot\Images\Ana Le Habiby.mp3" />
+    <None Include="wwwroot\Images\currandox2.jpg" />
+    <None Include="wwwroot\Images\Dev.mp4" />
+    <None Include="wwwroot\Images\favicons.png" />
+    <None Include="wwwroot\Images\mov_bbb.mp4" />
+    <None Include="wwwroot\Index.html" />
+    <None Include="wwwroot\Layout.html" />
+  </ItemGroup>
+
+</Project>

@@ -52,6 +52,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day8DLLDemo", "Day8DLLDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day8DelegateinBusinessDemo", "Day8DelegateinBusinessDemo\Day8DelegateinBusinessDemo.csproj", "{8310FBC9-F6C2-4FB6-AF96-1A54F17AF4A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day9HTML5Day1Demo", "Day9HTML5Day1Demo\Day9HTML5Day1Demo.csproj", "{F3C84419-B45A-48AF-A316-A9ABD01D0EAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -134,6 +136,10 @@ Global
 		{8310FBC9-F6C2-4FB6-AF96-1A54F17AF4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8310FBC9-F6C2-4FB6-AF96-1A54F17AF4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8310FBC9-F6C2-4FB6-AF96-1A54F17AF4A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C84419-B45A-48AF-A316-A9ABD01D0EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C84419-B45A-48AF-A316-A9ABD01D0EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C84419-B45A-48AF-A316-A9ABD01D0EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C84419-B45A-48AF-A316-A9ABD01D0EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
