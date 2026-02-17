@@ -76,7 +76,7 @@
             new Employee { Id = 1, Code = 101, Name = "Mahmoud", Job = "Dev" };
 
             var xx = new { Id = 5, Salary = 50000, FullName = "SayedHawas", Email = "Sayed@yahoo.com" };
-            xx.Id = 10;
+            //xx.Id = 10;
 
             #endregion
             Console.ReadLine();
