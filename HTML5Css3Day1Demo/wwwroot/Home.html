@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <base href="https://www.w3schools.com/" target="_blank">
+</head>
+<body>
+
+
+    <head>
+  
+</head>
+
+<body>
+    <noscript>
+        Your Browesr Not allow the Javascript
+    </noscript>
+<img src="images/stickman.gif" width="24" height="39" alt="Stickman">
+<a href="tags/tag_base.asp">HTML base Tag</a>
+<a href="https://www.google.com">Google</a>
+<img src="css/gradient_bg.png">
+
+</body>
+    <h1> Welcome in Form HTMl 5 </h1>
+    <form>                             <!-- <form action="/" method="post"></form>-->
+         <fieldset>
+            <legend> Data Information </legend>
+            
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="txtId">ID  : </label>
+                    </td>
+                    <td>
+                        <input type="hidden" name="txtId" id="Id" value="101"  >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="txtAppName"> Application Name  : </label>
+                    </td>
+                    <td>
+                        <input type="text" name="AppName" id="txtAppName"  value=" Smart Application"  disabled >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="txtEmpCode"> Employee Code  : </label>
+                    </td>
+                    <td>
+                        <input type="text" name="EmpCode" id="txtEmpCode"  value=" SM-552548"  readonly >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="txtfirstname"> FirstName : </label>
+                    </td>
+                    <td>
+                        <input type="text" name="firstname" id="txtfirstname" placeholder="First Name" required autofocus >
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="txtLastName">Last Name  :</label></td>
+                    <td><input type="text" id="txtLastName" name="lastname"  placeholder="Last Name" /></td>
+                </tr>
+                <tr>
+                    <td><label for="txtPassword">Password  :</label></td>
+                    <td><input type="password" id="txtPassword"  name ="password" /></td>
+                </tr>
+               <tr>
+                    <td><label for="txtTel">Mobile:</label></td>
+                    <td><input type="tel" id="txtTel" name="tel" pattern="^01[0-2,5]{1}[0-9]{8}$" title="Plz enter correct Number 01#########" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="txtEmail">E-mail  :</label></td>
+                    <td><input type="email" id="txtEmail"  name="email" placeholder="Name@domain.com"  /></td>
+                </tr>
+                    <tr>
+                    <td><label for="txtUrl">Web site :</label></td>
+                    <td><input type="url" id="txtUrl" name="url" placeholder="http://www.domain.com" title ="plz enter correct url"  /></td>
+                </tr>
+             <tr>
+                        <td><label for="date1" >Date of Birth :</label></td>
+                        <td><input type="date" id="date1" name="dateofbirth"  /></td>
+                        <td><input type="week" id="date2"  /></td>
+                        <td><input type="month" id="date3"  /></td>
+                        <td><input type="datetime" id="date4"  /></td>
+                        <td><input type="datetime-local" id="date5"  /></td>
+             </tr>
+                 <tr>
+                 <td><label For="txtSalary">Salary :</label></td>
+                <td><input type="number" id="txtSalary" name="salary" min="1000" max="20000" value="11000" step="100" /></td>
+             </tr>
+                 <tr>
+                 <td><label for="txtVolume">Volume :</label></td>
+                <td><input type="range" id="txtVolume" name="volume" min="100" max="1000" value="200" step="10" /></td>
+             </tr>
+              
+             </tr>
+                 <tr>
+                 <td><label for="inputColo">color :</label></td>
+                <td><input type="color" id="inputColo"  name="color" /></td>
+             </tr>
+             <tr>
+                 <td><label for="genederOpt">Gender :</label></td>
+                <td><input type="radio" id="genederOpt" value="male"     name="gender"  checked /> Male</td>
+                <td><input type="radio" id="genederOpt1" value="female"  name="gender" />Female</td>
+             </tr>
+             <tr>
+                 <td><label for="QOpt">are you happy ?  :</label></td>
+                <td><input type="radio" id="QOpt" value="Yes"     name="qu"  checked /> Yes</td>
+                <td><input type="radio" id="QOpt1" value="No"  name="qu" />NO</td>
+             </tr>
+
+                <tr>
+                 <td><label>Q Type Of Car ? :</label></td>
+                <td><input type="checkbox" id="ch1" value="Fait" name="TypeCar"  /> FAIT</td>
+                <td><input type="checkbox" id="ch2" value="BMW"  name="TypeCar" checked="checked" />BMW</td>
+             </tr>
+
+             <tr>
+                 <td><label>Search :</label></td>
+                <td><input type="search" id="cearch1" name="querystring" /> </td>
+             </tr>
+
+                  <tr>
+                 <td><label>progress bar :</label></td>
+                <td><progress id="progress1"  max="100" value="50" > </td>
+             </tr>
+
+                 <tr>
+                 <td><label>My Laptop:</label></td>
+                <td>
+                    <select  id="List1"  name="laptop">
+                         <option value="HP">HP</option>
+                         <option value="Dell" selected="selected">Dell</option>
+                         <option value="sony">Sony</option> 
+                    </select>
+                </td>
+             </tr>
+             <tr>
+                 <td><label>Description:</label></td>
+                <td>
+                    <textarea id="textarea1" name="description" cols="20" rows="10"  > 
+                    </textarea>
+                    </td>
+                </tr>
+          
+                    <tr>
+                 <td><label>My laptop:</label></td>
+                <td>
+                    <input list="laptops" />
+                    <datalist id ="laptops">
+                         <option value ="HP" >
+                         <option value ="DEll" >
+                         <option value ="Sony" >
+                    </datalist>
+                </td>
+             </tr>
+                  <tr>
+                 <td><label> Upload File :</label></td>
+                <td><input type="file" id="file" multiple="multiple"  name="filename"/> </td>
+             </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Send Data" id="submitbuttom">
+                    </td>
+                    <td>
+                        <input type="reset"  value="Clean data">
+                    </td>
+                   
+                </tr>
+            </table>
+         </fieldset>
+    </form>
+
+     <button id="btn" onclick="window.alert('Welcome From Button ...')" >Show Message</button>
+         
+    <br>
+    <iframe src="https://en.wikipedia.org/wiki/HTML5" title="description"  width="600" height="600"></iframe>
+    
+
+    <script>
+        window.alert("JavaScript Message ....");
+    </script>
+</body>
+</html>

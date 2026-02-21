@@ -60,6 +60,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day10EFCoreDemo", "Day10EFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTML5Day3Demos", "HTML5Day3Demos\HTML5Day3Demos.csproj", "{741A7720-AFCC-42E8-98A3-6D11B3B2DB0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTML5Css3Day1Demo", "HTML5Css3Day1Demo\HTML5Css3Day1Demo.csproj", "{76F4EFE7-D2BF-48F7-98EA-F31597963F75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -158,6 +160,10 @@ Global
 		{741A7720-AFCC-42E8-98A3-6D11B3B2DB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{741A7720-AFCC-42E8-98A3-6D11B3B2DB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{741A7720-AFCC-42E8-98A3-6D11B3B2DB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F4EFE7-D2BF-48F7-98EA-F31597963F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F4EFE7-D2BF-48F7-98EA-F31597963F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F4EFE7-D2BF-48F7-98EA-F31597963F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F4EFE7-D2BF-48F7-98EA-F31597963F75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
