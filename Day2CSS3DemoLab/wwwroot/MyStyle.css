@@ -1,0 +1,59 @@
+*{
+  padding: 2px;
+  margin: 5px 0px;
+
+}
+body
+{
+  background-color: rgb(147, 144, 144);
+}
+
+header
+{
+    background-color: rgb(205, 73, 73);
+    color: white;
+    text-align: center;
+    border: 3px solid  white ;
+    border-radius: 10px;
+}
+nav{
+    background-color: rgb(24, 104, 150);
+    border: 3px solid  white ;
+    border-radius: 10px;
+    color:white;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a {
+   color:white;
+   text-decoration: none;
+}
+
+section{
+    background-color: rgb(67, 117, 73);
+    width: 70%;
+    float: left;
+    height: 500px;
+}
+aside{
+    background-color: rgb(144, 201, 20);
+    background-image: url("Images/paper.gif");;
+    width: 28%;
+    /*width: 200px;*/
+    float: right;
+     height: 500px;
+}
+
+footer{
+    clear: both;
+    background-color: rgb(205, 73, 73);
+    color: white;
+    text-align: center;
+    border: 3px solid  white ;
+    border-radius: 10px;
+}
+
+#para{
+       color:rgb(55, 4, 224);
+}
