@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="MyScript.js"></script>
+    <script>
+       // window.alert("Welcome in JS From Head ....");
+    </script>
+</head>
+<body>
+    <button onclick="window.alert('Welcome in JS From Button ....');"> SayHello </button>
+    <p id="para"></p>
+
+
+    <script>
+        //debugger
+        // document.write("Welcome in <h1> JavaScript </h1>");
+        //DOM Document Object Model 
+        // window.alert("Welcome in JS From Body ....");
+        // var x=  window.prompt("Enter Your Name","");
+        // console.log("Welcome "+ x );
+        // document.getElementById("para").innerText =  "Welcome " + x; 
+
+    
+        //document.write( "Welcome : " + x);
+        //
+        /*
+           Javascript
+        */
+
+        // var name = "sayed";
+        // var age = 40;
+
+        // window.alert(typeof(name) + " " + typeof(age))
+
+        // var x = 5;   //---> datatype is number
+        // var greeting = "Hello";
+        // window.alert(typeof(x));        //----> number
+        // typeof(greeting); //----> string
+
+
+        //  var x ="Ahmed" ; 
+        //  window.alert(typeof(x));
+         
+        //  var z ;
+        //  window.alert(typeof(z));
+
+        //  var y =null ;
+        //  window.alert(typeof(y));
+        //  // 100a   Number 100
+        //  // a100   Number NaN     
+        //  var age =  window.prompt("Eniter Your Age ","");
+        //  var ageInt = parseInt(age);
+        //  document.getElementById("para").innerText = typeof(age)  +" " + age ; 
+
+        //  document.getElementById("para").innerText += typeof(ageInt)  +" " + ageInt ; 
+        //6-Data type in Javascript
+        // -String    in string  "   --> \"   '  -->\'
+        // -Numbers     Integer , FloatingPoint    ---> Nan (Not a Number)
+        // -Boolean 
+        // -Null value
+        // -Undefined  
+        // -Object  --> Object   var person{Id:1,Name:"Sayed",Salary:3000}
+
+        // var x = 100;
+        // window.alert(typeof(x) + " " + x);
+        // var x = "ahmed"
+        // window.alert(typeof(x) + " " + x);
+        // M = 200;
+        // window.alert(typeof(M) + " " + M);
+        // M = "Ahmed Ali";
+        // window.alert(typeof(M) + " " + M);
+
+        // const y = 200;
+        //  window.alert(typeof(y) + " " + y);
+        //  //Logical Error
+        // //  y="sayed";
+        // //  window.alert(typeof(y) + " " + y);
+        
+        // // const y = "Ali";
+        // //  window.alert(typeof(y) + " " + y);
+
+        // let z = 200;
+        // window.alert(typeof(z) + " " + z);
+        // z="ahmed";
+        // window.alert(typeof(z) + " " + z);
+        // //  let z = 200;
+        // // window.alert(typeof(z) + " " + z);
+      
+
+       // 7-Convert Function in JavaScript        
+            //eval();              //String ----> Number   
+            // var x = "123";
+            // var y = 12;
+            // var z = eval(x) + y;
+
+            // document.write(z);      //---> undefined
+
+
+           //ParseInt();          string ----> Number  
+    
+            // document.write("<br />")
+            // var x = "123a"; //"12354872251425e"
+            //  window.alert(typeof(x) + " " + x);
+            // var y = 12;
+            // var z = parseInt(x) + y;
+
+            // document.write(z);      //---> undefined
+
+            // document.write("<br />")
+            // var x = "123.55"; //"12354872251425e"
+            //  window.alert(typeof(x) + " " + x);
+            // var y = 12;
+            // var z = parseFloat(x) + y;
+            // document.write(z);   
+           
+             //Array in JS 
+            // 1-
+            var colorArr= new Array();
+            colorArr[0]="red";
+            colorArr[1]="yellow";
+            colorArr[2]="Blue";
+            //2-   
+            var colorArr= new Array(3);
+            colorArr[0]="red";
+            colorArr[1]="yellow";
+            colorArr[2]="Blue";
+            //3-
+            var colorArry = ["red","yellow","blue"];
+
+
+            for(var x=0 ; x < colorArr.length;x++ )
+            {
+                 document.write( "<h1 style='color:" + colorArr[x]  + "'>" + colorArr[x] +"</h1>");   
+            }
+    </script>
+</body>
+</html>

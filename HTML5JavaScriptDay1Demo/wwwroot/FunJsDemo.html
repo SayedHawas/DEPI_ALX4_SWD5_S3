@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainHeader{
+            border: 3px solid red;
+        }
+         #mainDiv{
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <input type="number" id="myNumber" >
+    <label id="result"></label>
+    <br>
+    <button onclick="ShowResult(GetNumber('myNumber'),'result')"> Show Result </button>
+    <header id="mainHeader">
+
+    </header>
+    <div id="mainDiv">
+
+    </div>
+    <button onclick="Print('mainDiv','h1','Smart Page ')"> Show H1  In Div</button>
+    <button onclick="Print('mainHeader','h1','Smart Page ')"> Show H1 in Header </button>
+    <script>
+        //datatype
+        // function Sum(x,y)
+        // {
+        //    return x+y;
+        // }
+        // //Void
+        //  function Add(x,y)
+        // {
+        //    document.write(x+y);
+        // }
+        function Print(container,tag, text) {
+            document.getElementById(Print.arguments[0]).innerHTML = "<" + tag + ">" + text + "</" + tag + ">"
+            //document.write("<" + tag + ">" + text + "</" + tag + ">");
+        }
+
+
+          
+        function Factorial(Number)
+        {
+            if(Number<1)
+            return 0;
+            if(Number==1)
+                return 1;
+            else 
+                return Number * Factorial(Number-1);
+        }
+        function GetNumber(input)
+        {
+            var s  = document.getElementById(input).value;
+            return Factorial(s);
+        } 
+
+         function ShowResult(result , traget)
+         {
+              document.getElementById(traget).innerText = result;
+         }
+    </script>
+</body>
+</html>
