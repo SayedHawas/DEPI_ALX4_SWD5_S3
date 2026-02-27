@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+    var arr = new Array(4);
+    arr[0] = "sayed";          //0
+    arr[1] = 50;               //1
+    arr[2] = new Array("sayed", "Maryim", "retaj"); //2 ,
+    arr[3] = false;
+    arr[6] = "Welcome ";
+</script>
+ <link />
+</head> 
+<body>
+    
+     <p id="para"> </p>
+     <button onclick="print();"> Click Me </button>
+    <hr />
+    <img />
+    <br />
+    <script>
+      
+        document.write( typeof(arr));
+        document.write("<br/>")
+        document.write(arr[1]);
+        document.write("<br/>")
+        document.write(arr[4]);
+        document.write("<br/>")
+        document.write(arr[6]);
+        document.write("<br/>")
+        document.write(arr[5]);
+        document.write("<br/>")
+        document.write(arr[2]);
+        document.write("<br/>")
+        document.write(arr[2][1]);
+        document.write("<br/>")
+        document.write(arr);
+        document.write("<br/>")
+
+        //delete arr[3];
+         
+
+        document.write("delete : "  + arr[3]);
+        document.write("<br/>")
+
+        document.write(typeof (arr[2][0]));
+        document.write("<br/>")
+
+        document.write(typeof (arr[1]) == 'NaN');
+
+
+        var y = 10;
+        var x = 20;
+        document.write("the value for x " + x+ "<br/>");
+        document.write("the value for y " + y + "<br/>");
+        var z = x + y;
+        document.write("+  ==> "+ z + "<br/>");
+        var z = x - y;
+        document.write("-  ==> " + z + "<br/>");
+        var z = x / y;
+        document.write("/  ==> " + z + "<br/>");
+        var z = x * y;
+        document.write("*  ==> " + z + "<br/>");
+        //++ Postfix
+        document.write(x++  + "<br/>");
+        document.write("++   ==> " + x + "<br/>");
+        //++ Prefix
+        document.write(++x + "<br/>");
+
+            //2-Logical Operators:-
+        // &&   ||   !(Not)
+        var b = true;
+        //Not
+        document.write("Not ! <br />")
+        document.write(!b + " <br />")
+        //and 
+        document.write("And && <br />" )
+        b = x > 1 && y > 1;
+        document.write(b + "<br />")
+        b = x < 1 && y > 1;
+        document.write(b + "<br />")
+        //OR
+        document.write("OR || <br />")
+        b = x < 1 || y > 1;
+        document.write(b + "<br />")
+
+        var y = 10;
+        var x = 20;
+        var z = true;
+        document.write("Comparison Operators" + "<br/>");
+        document.write("-------------------- " + "<br/>");
+         z = x > y;
+        document.write("> " + z + "<br/>");
+         z = x < y;
+        document.write("< " + z + "<br/>");
+         z = x >= y;
+        document.write(">= " + z + "<br/>");
+         z = x <= y;
+         document.write("<= " + z + "<br/>");
+         y = 20; // x=20
+         z = x == y;
+         document.write("== " + z + "<br/>");
+         z = x === y;
+         document.write("=== " + z + "<br/>");
+         
+         
+         y="20";   //20 == "20"  true
+         z = x == y;
+         document.write("==" + z + "<br/>");
+          z = x === y; //20 === "20"  false
+         document.write("===" + z + "<br/>");
+
+
+
+        document.write("Conditional Expression Ternary" + "<br/>");
+         document.write("------------------------------" + "<br/>");
+         var v1 = 15;
+         var v2 = 6;
+         var max = (v1 > v2) ? v1 : v2;
+         document.write("Max is : " + max);
+        document.write(" <br /> ");
+        var x = 6;
+        if (x < 10)
+        {
+            document.write(" x gt 10 <br /> ");
+        }
+
+
+        //Date
+        var date = new Date();
+        var h = parseInt(date.getHours());
+        document.write( h + "<br />")
+        if (h < 12)
+            document.write(h + "Good morning");
+        else
+            document.write((h-12) + "Good evening ");
+
+        document.write(h);
+
+
+        // var day = prompt("Enter numebr of day","");
+        // day = parseInt(day);
+        // switch(day)
+        // {
+        // case 1:
+        // case 2:
+        // case 3:
+        // alert("businss Day ");
+        //     break;
+        // case 4:
+        // case 5:
+        // alert("hafe week");
+        // break;
+        // case 6 :
+        // case 7 :
+        //     alert("holiday");
+        //     break;
+        // default:
+        //     alert ("Invalid Day");
+        //     break;
+        // }
+
+        document.write("<br/>");
+        for(var i =0; i<10;i++)
+        {
+          document.write(" number  : " + i + "<br/>");
+        }
+
+
+        var arr = [77,55,66,12,44];
+        arr.sort(); // ---Method 
+        arr.length; // ---Properity
+        arr.reverse();
+        document.write(arr.toString());  // string , string , string ,
+        document.write("<br/>");
+        for(var i in arr)
+        {
+            document.write("index : " +  i );  //index
+            document.write(" value  " + arr[i] + "<br />"); // Value 
+        }
+
+        document.write("<br/>");
+        var x =0;
+        while(x<10)
+        {
+            document.write(" number  : " + x + "<br/>");
+            x++
+        }
+
+        document.write("<br/>");
+        var y=0;
+        do{
+        document.write(" number  : " + y + "<br/>");
+        y++
+        }while(y<10);
+
+                           //0  1  2  3  4  5  6
+         var arr = new Array(1, 2, 3, 4, 5, 6, 7);
+        //debugger;
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (i % 2 == 0)
+                sum += arr[i];
+        }
+        document.write("the total is " + sum);
+
+
+        function print() {
+            //document.write("Hello in JavaScript ");
+            document.getElementById('para').innerHTML = "Hello in JavaScript ";
+        }
+    </script>
+</body>
+</html>
