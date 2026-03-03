@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="MyScript.js"></script>
+    <style>
+        #mainHeader{
+            border: 3px solid red;
+        }
+         #mainDiv{
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <label> First Name</label>
+    <input type="text"  id="txtFN" >
+    <button onclick="validationText('txtFN');  "> Click Me </button>
+    <hr />
+    <input type="number" id="myNumber" >
+    <label id="result"></label>
+    <br>
+    <hr>
+      <label id="result1"></label>
+      <button onclick="ShowResult2('result1')"> Show Result Salary </button>
+      <button onclick="ShowResult2('')"> Show Result Salary With Error</button>
+    <hr>
+    <br>
+    <button onclick="ShowResult(GetNumber('myNumber'),'result')"> Show Result </button>
+    <header id="mainHeader">
+
+    </header>
+    <div id="mainDiv">
+
+    </div>
+    <button onclick="Print('mainDiv','h1','Smart Page ')"> Show H1  In Div</button>
+    <button onclick="Print('mainHeader','h1','Smart Page ')"> Show H1 in Header </button>
+    <script>
+        //datatype
+        // function Sum(x,y)
+        // {
+        //    return x+y;
+        // }
+        // //Void
+        //  function Add(x,y)
+        // {
+        //    document.write(x+y);
+        // }
+   
+         console.log("NetSalary : " +   EmployeeSalary(20000,2000));
+
+
+// 6- Exception Handling 
+// Try ....Catch  .... Finally
+// =====================================================
+// try
+//   {
+//     test Code ;
+//   }
+// catch{
+//     Code when Run Error;
+// }
+// Finally 
+// {
+//   code run In Run Or Error;
+// }
+
+       // debugger;
+    try {
+            var x = 10, y =0;
+            var z = x / y;
+           // console.log(z);
+
+            if(isNaN(z)) throw "invalid Format ... "
+            if(y==0) throw "Div By Zero "
+        } catch (e) {
+            console.log(e);
+        }
+        finally {
+           console.log("End Script ....")
+        }
+
+
+        //  try{
+        //     var Myarray;
+        //     for(var i = 0;i<10;i++)
+        //     {
+        //         document.write(Myarray[i] + "<br />");
+        //     }
+        // }catch (ex){
+        //      console.log(ex);
+        // }
+
+
+        // =========================
+        // 7-Object in JavaScript:-
+        // ========================
+        // Like Class in C# 
+        // =======================================================
+        // --> Object   var person{Id:1,Name:"Sayed",Salary:3000}
+        // =======================================================
+
+         //Object in JavasScript 
+         var Employee = new Object();  // Object (O) upper case 
+         Employee.ID = 1;
+         Employee.Name = "Sayed";
+         Employee.Salary = 3000;
+         Employee.NetSalary = function()
+          {
+              Employee.Salary+200;
+          }
+          Employee.Job = "Developer";
+         
+
+
+         console.log("Welcome " + Employee.Name );
+         console.log("Your salary is : " + Employee.Salary) ;
+
+
+        var Client = {
+             Name: "Retaj",
+             Address : "Alex", 
+             Payment :1000,
+             netPayed: function ()
+             {
+                 console.log(Client.Payment + 200 );
+             },
+             Country :"Egypt"
+         };
+
+         console.log("Client : " + Client );//Client : [object Object]
+         console.log("Client Name  : " + Client.Name  + " Address : " + Client.Address);
+         //console.log( Client.netPayed());
+        console.log(Client.Payment);
+        console.log(Client["Name"]);
+      
+
+        //-By Variables
+        var x = "Salary";
+        Employee[x]=6000; 
+        console.log(Employee.Salary);
+
+        //For Each
+        for (var i in Employee) {
+            console.log ("Field : " + i + "=" + Employee[i] );
+        }
+          for (var i in Client) {
+            console.log ("Field : " + i + "=" + Client[i] );
+        }
+
+     console.log(" ----------------------");
+    //delete 
+      delete Client.Country;
+
+       for (var i in Client) {
+            console.log ("Field : " + i + "=" + Client[i] );
+        }
+
+        var bool = "Name" in Employee;   // If field exists  ---(true)
+        console.log(bool);
+
+        var bool = "Country" in Client;   // If field exists  ---(true)
+        console.log(bool);
+
+
+        //Object in JavasScript 
+         var Employee = new Object();  // Object (O) upper case 
+         Employee.ID = 1;
+         Employee.Name = "Sayed";
+         Employee.Salary = 3000;
+         console.log(typeof(Employee));
+         //Object in JavasScript 
+         var Manager = new Object();  // Object (O) upper case 
+         Manager.ID = 1;
+         Manager.Name = "Sayed";
+         Manager.Salary = 3000;
+         console.log(typeof(Manager));
+
+    console.log(" ----------------------");
+    //-------------------------
+    var b = Employee == Manager;
+    console.log(b);           //-->false
+    var bo = Employee === Manager;
+    console.log(bo);          //-->false
+     var bo2 = Employee.ID == Manager.ID;
+    console.log(bo2);          //-->false
+    //-------------------------
+      
+        var Employee2 = Manager;
+         console.log(typeof(Employee2));
+        var boo = Employee2 == Manager;
+        console.log(boo);           //--True
+          var boo = Employee2 === Manager;
+        console.log(boo);           //--True
+
+
+
+        function validationText(Traget) {
+            var t = document.getElementById(Traget);
+            if (t.value == 0 || t.value == null) {
+                    alert('your must Enter Data');
+                t.focus();
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
