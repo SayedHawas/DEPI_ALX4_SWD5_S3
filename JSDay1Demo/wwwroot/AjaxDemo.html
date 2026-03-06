@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/jquery/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+    <button> Show Data</button>
+
+    <table id="myTable">
+
+    </table>
+
+<script>
+    
+                $("button").click(function(){
+                $.get("https://fakestoreapi.com/products", function(data, status){
+
+                //   var newRow  =  document.createElement('tr');
+                //   document.getElementById("#myTable").appendChild(newRow);
+
+                //   var idtext =  document.createElement('td');
+                //   idtext.textContent = data[item].id ;
+                //   document.getElementById("#myTable").appendChild(idtext);
+                //   var titletext =  document.createElement('td');
+                //   titletext.textContent = data[item].title ;
+                //   document.getElementById("#myTable").appendChild(titletext);
+                //   var pricetext =  document.createElement('td');
+                //   pricetext.textContent = data[item].price ;
+                //   document.getElementById("#myTable").appendChild(pricetext);
+
+                   for (var item in data) {
+                    //    console.log (data[item].id + " " + data[item].title + " " + data[item].price );
+                    //    console.log (status);
+                                var newRow  =  document.createElement('tr');
+                            document.getElementById("myTable").appendChild(newRow);
+                            var idtext =  document.createElement('td');
+                            idtext.textContent = data[item].id ;
+                            document.getElementById("myTable").appendChild(idtext);
+                            var titletext =  document.createElement('td');
+                            titletext.textContent = data[item].title ;
+                            document.getElementById("myTable").appendChild(titletext);
+                            var pricetext =  document.createElement('td');
+                            pricetext.textContent = data[item].price ;
+                            document.getElementById("myTable").appendChild(pricetext);
+                   }
+                  
+
+                //alert("Data: " + data + "\nStatus: " + status);
+                
+                 });
+            });
+</script>
+</body>
+</html>
