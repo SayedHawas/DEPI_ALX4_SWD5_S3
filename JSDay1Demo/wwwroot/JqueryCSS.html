@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery/jquery.min.js"></script>
+ <title></title>
+    <style type="text/css">
+        .myclass {
+         color:green;
+         font-size:30px;
+        }
+    </style>
+    <style>
+       #div1 {
+           width:350px;
+           height:70px;
+           padding:10px;
+           border:1px solid #aaaaaa;
+
+       }
+
+       #div2 {
+           width:350px;
+           height:70px;
+           padding:10px;
+           border:1px solid #aaaaaa;
+
+       }
+</style>
+
+</head>
+<body>
+    <p id="demo"> This is Paragraph </p>
+
+    <input type="button" id="btn1" value="Click" />
+
+
+    <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420" >
+    <source src="Files/Dev.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+
+<input type="file" id="theBinaryFile" onchange="onLoadBinaryFile()" />
+<img id="theImage"></img>
+
+
+<input type="file" id="theTextFile" onchange="onLoadTextFile()" multiple="multiple" />
+<textarea id="theMessageArea" rows="30" cols="40"></textarea>
+
+<p>Drag smart phone </p>
+
+<div id="div1"  ondrop="drop(event)" ondragover="allowDrop(event)"   ></div>
+<br>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+
+<img id="drag1" src="Files/images.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+</div>
+
+<p id="demo">Click the button to get your position.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<div id="mapholder"></div>
+
+<script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+        var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+        + latlon + "&zoom=14&size=400x300&sensor=false&keyapi=";
+        document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+    }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred."
+                break;
+        }
+    }
+</script>
+
+
+ <script>
+        $(document).ready(function () {
+            //check the SessionStorage Ready ?
+            if (window.sessionStorage) {
+                //check the session Key By Name of key 
+                if (sessionStorage.MyName) {
+                    alert("Your Name is : " + sessionStorage.MyName);
+                } else {
+                    sessionStorage.setItem("MyName", "Sayed hawas");
+                }
+            }
+        });
+ </script>
+
+
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+
+<script type="text/javascript">
+    function onLoadTextFile() {
+        var theFileElem = document.getElementById("theTextFile");
+
+        // Get the File object selected by the user, and make sure it is a text file.
+        if (theFileElem.files.length != 0 && theFileElem.files[0].type.match(/text.*/)) {
+            // Create a FileReader and handle the onload and onerror events.
+          
+            for (var i = 0; i < theFileElem.files.length; i++) {
+            var reader = new FileReader();
+            reader.onload = function(e){
+                var theMessageAreaElem = document.getElementById("theMessageArea");
+                theMessageAreaElem.value += e.target.result+"</br>";
+                
+            };
+            reader.onerror = function(e){
+                alert("Cannot load text file");
+            };
+            // Read text file (the second parameter is optional - the default encoding is "UTF-8").
+           
+            reader.readAsText(theFileElem.files[i], "ISO-8859-1");
+            
+            }
+          
+        } else {
+            alert("Please select a text file");
+        }
+    }
+</script>
+
+<script >
+    function onLoadBinaryFile() {
+        var theFileElem = document.getElementById("theBinaryFile");
+        // Get the File object selected by the user (and make sure it is an image file).
+        if (theFileElem.files.length != 0 && theFileElem.files[0].type.match(/image.*/))
+        {
+            // Create a FileReader and handle the onload and onerror events.
+            var x = "Ahmed";
+            typeof x  //string
+
+            var y = new String("Ali");  //Math   Date
+
+            var reader = new FileReader();
+            reader.onload = function(e){
+                var theImgElem = document.getElementById("theImage");
+                theImgElem.src = e.target.result;
+            };
+            reader.onerror = function(e){
+                alert("Cannot load binary file");
+            };
+            // Read the binary file.
+            reader.readAsDataURL(theFileElem.files[0]);
+        } else {
+            alert("Please select a binary file");
+        }
+    }
+</script>
+
+     <script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+    </script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //selector event
+            $("#btn1").click(function () {
+                //1-selector element to change 
+                // $("#demo").css("color","Red");
+
+                //2-selector element to Change With multiple
+                //$("#demo").css({'color':'red','font-weight':'bold','font-family':'Tahoma','font-size':'20px'});
+
+                //3-selector with variables 
+                // var mycss = {'color':'red','font-weight':'bold','font-family':'Tahoma','font-size':'20px'};
+                // $("#demo").css(mycss);
+
+
+                //4-selector with css class
+                 $("#demo").addClass("myclass");
+            });
+        });
+    </script>
+</body>
+</html>
