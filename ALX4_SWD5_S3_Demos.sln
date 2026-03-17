@@ -70,6 +70,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSDay1Demo", "JSDay1Demo\JS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpNameSpaceDemo", "CsharpNameSpaceDemo\CsharpNameSpaceDemo.csproj", "{B270D057-ED4D-4EDE-ABF5-1D3890A654A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1WebAPIDemo", "Day1WebAPIDemo\Day1WebAPIDemo.csproj", "{9884CF21-7267-4B82-AB1F-A4CE60CAD661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1WebMVCDemo", "Day1WebMVCDemo\Day1WebMVCDemo.csproj", "{3A488DE4-187E-4BEE-A265-0D8F2E4C6C0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -188,6 +192,14 @@ Global
 		{B270D057-ED4D-4EDE-ABF5-1D3890A654A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B270D057-ED4D-4EDE-ABF5-1D3890A654A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B270D057-ED4D-4EDE-ABF5-1D3890A654A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9884CF21-7267-4B82-AB1F-A4CE60CAD661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9884CF21-7267-4B82-AB1F-A4CE60CAD661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9884CF21-7267-4B82-AB1F-A4CE60CAD661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9884CF21-7267-4B82-AB1F-A4CE60CAD661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A488DE4-187E-4BEE-A265-0D8F2E4C6C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A488DE4-187E-4BEE-A265-0D8F2E4C6C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A488DE4-187E-4BEE-A265-0D8F2E4C6C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A488DE4-187E-4BEE-A265-0D8F2E4C6C0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
