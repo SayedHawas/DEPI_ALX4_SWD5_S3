@@ -80,6 +80,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPCoreWebAPIDBFirst", "ASP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPCoreWebAPIDemos", "ASPCoreWebAPIDemos\ASPCoreWebAPIDemos.csproj", "{6D9B94C8-66CB-4730-918C-127A8BF69323}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEnumerableVSIQueryableDemo", "IEnumerableVSIQueryableDemo\IEnumerableVSIQueryableDemo.csproj", "{BDCC85F5-F433-4F9A-A63E-E69A2245CCB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -218,6 +220,10 @@ Global
 		{6D9B94C8-66CB-4730-918C-127A8BF69323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D9B94C8-66CB-4730-918C-127A8BF69323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D9B94C8-66CB-4730-918C-127A8BF69323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDCC85F5-F433-4F9A-A63E-E69A2245CCB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCC85F5-F433-4F9A-A63E-E69A2245CCB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCC85F5-F433-4F9A-A63E-E69A2245CCB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCC85F5-F433-4F9A-A63E-E69A2245CCB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
