@@ -12,6 +12,7 @@ namespace ASPCoreWebAPIDemos.Data
         {
         }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
