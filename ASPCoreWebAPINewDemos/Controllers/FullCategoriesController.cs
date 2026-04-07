@@ -31,7 +31,7 @@ namespace ASPCoreWebAPINewDemos.Controllers
         public async Task<ActionResult<Category>> Get(int id)//binding Shap Data
         {
             //var category = _db.Categories.Find(id);
-            var category = await _db.Categories.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+            var category = await _db.Categories.AsNoTracking().FirstOrDefaultAsync(c => c.CategoryId == id);
             if (category == null)
             {
                 return NotFound();
@@ -49,7 +49,7 @@ namespace ASPCoreWebAPINewDemos.Controllers
                 await _db.Categories.AddAsync(newCategory);
                 await _db.SaveChangesAsync();
                 //return Created(); //201 Created without Location Header
-                return CreatedAtAction(nameof(Get), new { id = newCategory.Id }, newCategory); //201 Created with Location Header
+                return CreatedAtAction(nameof(Get), new { id = newCategory.CategoryId }, newCategory); //201 Created with Location Header
             }
             return BadRequest(ModelState); //400 Bad Request with ModelState Errors
         }
@@ -57,7 +57,7 @@ namespace ASPCoreWebAPINewDemos.Controllers
         [HttpPut("{id:int}")]
         public async Task<IActionResult> put([FromRoute] int id, [FromBody] Category newCategory) // Model Bind //Complex Type Create By User
         {
-            if (id != newCategory.Id)
+            if (id != newCategory.CategoryId)
             {
                 return BadRequest();
             }
@@ -93,7 +93,7 @@ namespace ASPCoreWebAPINewDemos.Controllers
         }
         private bool CategoryExist(int id)
         {
-            return _db.Categories.Any(k => k.Id == id);
+            return _db.Categories.Any(k => k.CategoryId == id);
         }
     }
 }

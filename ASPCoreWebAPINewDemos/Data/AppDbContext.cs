@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace ASPCoreWebAPINewDemos.Data
+﻿namespace ASPCoreWebAPINewDemos.Data
 {
     public class AppDbContext : DbContext
     {
@@ -14,6 +12,7 @@ namespace ASPCoreWebAPINewDemos.Data
         }
 
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         //override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
@@ -25,9 +24,9 @@ namespace ASPCoreWebAPINewDemos.Data
             base.OnModelCreating(modelBuilder);
             //seed data for categories
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Phones", Description = "Devices and gadgets" },
-                new Category { Id = 2, Name = "Books", Description = "All kinds of books" },
-                new Category { Id = 3, Name = "Clothing", Description = "Apparel and accessories" }
+                new Category { CategoryId = 1, Name = "Phones", Description = "Devices and gadgets" },
+                new Category { CategoryId = 2, Name = "Books", Description = "All kinds of books" },
+                new Category { CategoryId = 3, Name = "Clothing", Description = "Apparel and accessories" }
             );
             //Fluent Api(Using code C#)
             //modelBuilder.Entity<Category>(s =>
