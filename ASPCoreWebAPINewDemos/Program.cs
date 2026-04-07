@@ -9,6 +9,11 @@ namespace ASPCoreWebAPINewDemos
 
             // Add services to the container.
             builder.Services.AddControllers();
+            //builder.Services.AddControllers().AddJsonOptions(option =>
+            //{
+            //    option.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+            //});
+
             //Connection with Database Context
             builder.Services.AddDbContext<AppDbContext>(option =>
             {
