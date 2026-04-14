@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace ASPCoreWebAPINewDemos.Models
 {
-    public class Product
+    public class Product //: BaseEntity
     {
         [Key]
         public int ProductId { get; set; }
