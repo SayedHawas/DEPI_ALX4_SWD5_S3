@@ -1,3 +1,4 @@
+
 namespace ASPCoreWebAPINewDemos
 {
     public class Program
@@ -19,7 +20,11 @@ namespace ASPCoreWebAPINewDemos
             {
                 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+            //Registering the UnitOfWork service with the dependency injection container.
+            //This allows the application to use the UnitOfWork pattern for managing database transactions and operations.
 
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();

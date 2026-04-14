@@ -1,6 +1,6 @@
 ﻿namespace ASPCoreWebAPINewDemos.Data
 {
-    public class AppDbContext : DbContext
+    public partial class AppDbContext : DbContext
     {
         public AppDbContext()
         {
@@ -10,7 +10,6 @@
         {
 
         }
-
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
 
@@ -36,5 +35,7 @@
             //    s.Property(x => x.Name).IsRequired().HasMaxLength(100); // Name is required and has max length of 100
             //});
         }
+
+
     }
 }

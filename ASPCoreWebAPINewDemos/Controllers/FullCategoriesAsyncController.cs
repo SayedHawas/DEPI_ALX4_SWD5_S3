@@ -24,6 +24,7 @@ namespace ASPCoreWebAPINewDemos.Controllers
             {
                 return NotFound();
             }
+            //Mapping Category To CategoryGetDto
             List<CategoryGetDto> categoryGetDtos = new List<CategoryGetDto>();
             foreach (var item in list)
             {
@@ -34,6 +35,7 @@ namespace ASPCoreWebAPINewDemos.Controllers
                     Description = item.Description,
                     ProductNames = item.Products?.Select(p => p.Name).ToList()
                 };
+                //return Ok(categoryGetDto);
                 categoryGetDtos.Add(categoryGetDto);
             }
             return Ok(categoryGetDtos);
