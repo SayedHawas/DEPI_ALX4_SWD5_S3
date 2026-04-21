@@ -6,17 +6,17 @@ namespace ASPCoreWebAPINewDemos.UnitOfWorks
     public class UnitOfWork : IUnitOfWork
     {
         private readonly AppDbContext _context;
-        public IRepository<Category> RepositoryCategories { get; }
+        public IExtraRepository<Category> RepositoryCategories { get; }
         public IRepository<Product> RepositoryProducts { get; }
 
         public UnitOfWork(AppDbContext context,
-            IRepository<Category> repoCategory,
+            IExtraRepository<Category> repoCategory,
             IRepository<Product> repoProduct)
         {
             _context = context;
             RepositoryCategories = repoCategory;
             RepositoryProducts = repoProduct;
-            // RepositoryCategories = new Repository<Category>(_context);
+            // RepositoryCategories = new IExtraRepository<Category>(_context);
             // RepositoryProducts = new Repository<Product>(_context);
         }
         public int Complete()

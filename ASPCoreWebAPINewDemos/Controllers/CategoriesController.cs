@@ -5,13 +5,24 @@
     [ApiController]
     public class CategoriesController : ControllerBase
     {
+        //
         private readonly IServiceCategory _serviceCategory;
         public CategoriesController(IServiceCategory serviceCategory)
         {
             _serviceCategory = serviceCategory;
         }
         //https://localhost:7015/api/Categories
-        [HttpGet]  //Return Status Code 200 Ok with List of Categories  Message (Model)  200(List)  404(NotFound)
+        //Return Status Code 200 Ok with List of Categories  Message (Model)  200(List)  404(NotFound)
+        /// <summary>
+        ///  This Method to get all Categories
+        /// </summary>
+        /// <returns> List of Categories </returns>
+        [HttpGet]
+        [Produces("application/json")]
+        [ProducesResponseType<List<CategoryGetDto>>(200)]
+        [ProducesResponseType<CategoryGetDto>(404, Type = (typeof(void)))]
+        [ProducesResponseType<CategoryGetDto>(403, Type = (typeof(void)))]
+        [ProducesResponseType<CategoryGetDto>(400, Type = (typeof(void)))]
         public IActionResult Get()
         {
             var list = _serviceCategory.GetList();
@@ -27,7 +38,10 @@
             if (category == null) return NotFound();
             return Ok(category);
         }
-
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(201, Type = (typeof(void)))]
+        [ProducesResponseType<CategoryPostDto>(400, Type = (typeof(void)))]
         [HttpPost]
         public IActionResult Post(CategoryPostDto newCategory) // Model Bind //Complex Type Create By User
         {
@@ -35,8 +49,8 @@
             if (ModelState.IsValid)  // ModelState Dic Key , Value  id,Name,
             {
                 _serviceCategory.AddCategory(newCategory);
-                //return CreatedAtAction(nameof(Get), new { id = _serviceCategory.getMax() }, newCategory); //201 Created with Location Header
-                return Created();
+                return CreatedAtAction(nameof(Get), new { id = _serviceCategory.GetMax() }, newCategory); //201 Created with Location Header
+                //return Created();
             }
             return BadRequest(ModelState); //400 Bad Request with ModelState Errors
         }

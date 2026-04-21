@@ -56,12 +56,14 @@
         {
             throw new NotImplementedException();
         }
-
-
-
         public void UpdateCategory(CategoryPutDto category)
         {
             throw new NotImplementedException();
+        }
+
+        public int GetMax()
+        {
+            return _UOW.RepositoryCategories.MaxId();
         }
     }
 }

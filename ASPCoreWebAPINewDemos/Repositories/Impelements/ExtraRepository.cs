@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace ASPCoreWebAPINewDemos.Repositories.Impelements
 {
-    public class ExtraRepository<T> : IRepository<T>, IExtraRepository<T> where T : class
+    public class ExtraRepository<T> : IExtraRepository<T> where T : class
     {
         private readonly AppDbContext _context; // ? DbSet<Category>  _context = UntiOfWork.Context
         private readonly DbSet<T> _dbSet; // ? DbSet<Category>

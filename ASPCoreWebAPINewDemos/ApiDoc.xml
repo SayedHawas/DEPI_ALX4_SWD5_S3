@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASPCoreWebAPINewDemos</name>
+    </assembly>
+    <members>
+        <member name="M:ASPCoreWebAPINewDemos.Controllers.CategoriesController.Get">
+            <summary>
+             This Method to get all Categories
+            </summary>
+            <returns> List of Categories </returns>
+        </member>
+        <member name="T:ASPCoreWebAPINewDemos.Migrations.IntitalMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:ASPCoreWebAPINewDemos.Migrations.IntitalMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ASPCoreWebAPINewDemos.Migrations.IntitalMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ASPCoreWebAPINewDemos.Migrations.IntitalMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ASPCoreWebAPINewDemos.Migrations.AddProduct">
+            <inheritdoc />
+        </member>
+        <member name="M:ASPCoreWebAPINewDemos.Migrations.AddProduct.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ASPCoreWebAPINewDemos.Migrations.AddProduct.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ASPCoreWebAPINewDemos.Migrations.AddProduct.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
