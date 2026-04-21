@@ -69,21 +69,7 @@ namespace ASPCoreWebAPINewDemos.Repositories.Impelements
             var keyName = _context.Model.FindEntityType(typeof(T)).FindPrimaryKey().Properties.Select(x => x.Name).Single();
             return _dbSet.AsNoTracking().Max(e => EF.Property<int>(e, keyName));
         }
-        public IQueryable<T> GetAllPagination(int pageNumber = 1, int pageSize = 10) //1000 / 10 = 100 Pages
-        {
-            //Pagination SQL OffSet Fetch     Skip Take
-            //Get totalNumber Of Rows 
-            var TotalRows = _dbSet.AsNoTracking().Count();
-            //calculate total number of pages
-            var TotalPages = (int)Math.Ceiling((double)TotalRows / pageSize);  // 100.1 => 101
 
-            //Query
-            var query = _dbSet.AsNoTracking()
-                .Skip(pageNumber - 1 * pageSize)
-                .Take(pageSize);
-
-            return query;
-        }
         public PaginatedResult<T> GetAllPaginationWithData(int pageNumber = 1, int pageSize = 10)
         {
             //Pagination SQL OffSet Fetch     Skip Take
@@ -110,6 +96,36 @@ namespace ASPCoreWebAPINewDemos.Repositories.Impelements
         {
             var keyName = _context.Model.FindEntityType(typeof(T)).FindPrimaryKey().Properties.Select(x => x.Name).Single();
             return _dbSet.AsNoTracking().Any(e => EF.Property<int>(e, keyName) == id);
+        }
+        public IQueryable<T> GetAllPagination(int pageNumber = 1, int pageSize = 10) //1000 / 10 = 100 Pages
+        {
+            //Pagination SQL OffSet Fetch     Skip Take
+            //Get totalNumber Of Rows 
+            var TotalRows = _dbSet.AsNoTracking().Count();
+            //calculate total number of pages
+            var TotalPages = (int)Math.Ceiling((double)TotalRows / pageSize);  // 100.1 => 101
+
+            //Query
+            var query = _dbSet.AsNoTracking()
+                .Skip(pageNumber - 1 * pageSize)
+                .Take(pageSize);
+
+            return query;
+        }
+
+        public T GetByIDWithIncluding(int id, params string[] including)
+        {
+            //get Id Name 
+            var keyName = _context.Model.FindEntityType(typeof(T)).FindPrimaryKey().Properties.Select(x => x.Name).Single();
+
+            IQueryable<T> query = _dbSet.AsNoTracking();
+            foreach (var include in including)
+            {
+                query = query.Include(include);
+            }
+            //query
+            var Result = query.FirstOrDefault(e => EF.Property<int>(e, keyName) == id);
+            return Result;
         }
     }
 }

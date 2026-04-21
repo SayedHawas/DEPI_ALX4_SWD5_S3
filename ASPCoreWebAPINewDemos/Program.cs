@@ -26,6 +26,14 @@ namespace ASPCoreWebAPINewDemos
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+            // DI Services for Repositories and UnitOfWork
+            builder.Services.AddScoped<IServiceCategory, ServiceCategory>();
+            builder.Services.AddScoped<IServiceProduct, ServiceProduct>();
+
+            //using extension method to add services for AddServicesForServiceLayer
+            //builder.Services.AddServicesForServiceLayer();
+
+
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
             //Add Services to the container for Dependency Injection

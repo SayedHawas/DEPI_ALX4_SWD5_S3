@@ -6,7 +6,7 @@ namespace ASPCoreWebAPINewDemos.Repositories.Interfaces
     {
         int RowsCount();
         int MaxId();
-        IQueryable<T> GetAllPagination(int pageNumber = 1, int pageSize = 10);
+
         PaginatedResult<T> GetAllPaginationWithData(int pageNumber = 1, int pageSize = 10);
     }
 }

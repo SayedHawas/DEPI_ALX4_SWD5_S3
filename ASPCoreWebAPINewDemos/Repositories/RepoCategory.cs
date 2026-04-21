@@ -1,12 +1,13 @@
-﻿namespace ASPCoreWebAPINewDemos.Repositories
+﻿
+
+namespace ASPCoreWebAPINewDemos.Repositories
 {
-    public class RepoCategory : IRepos
+    public class RepoCategory : IRepos, IReposDemo
     {
         //DI AppDbContext
         public List<Category> GetCategories()
         {
-            return null;
+            throw new NotImplementedException();
         }
-
     }
 }

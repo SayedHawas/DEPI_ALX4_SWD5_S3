@@ -22,5 +22,7 @@ namespace ASPCoreWebAPINewDemos.Repositories.Interfaces
         IEnumerable<T> Search(Expression<Func<T, bool>> predicate);
         IEnumerable<T> GetAllWithIncluding(params string[] including);
         bool IsExist(int id);
+        IQueryable<T> GetAllPagination(int pageNumber = 1, int pageSize = 10);
+        T GetByIDWithIncluding(int id, params string[] including);
     }
 }
