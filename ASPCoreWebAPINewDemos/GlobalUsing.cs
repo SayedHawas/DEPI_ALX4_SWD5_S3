@@ -1,6 +1,9 @@
 ﻿global using ASPCoreWebAPINewDemos.Data;
+global using ASPCoreWebAPINewDemos.DTOS.CategoryDtos;
 global using ASPCoreWebAPINewDemos.Models;
 global using ASPCoreWebAPINewDemos.Repositories.Impelements;
 global using ASPCoreWebAPINewDemos.Repositories.Interfaces;
+global using ASPCoreWebAPINewDemos.Services;
 global using ASPCoreWebAPINewDemos.UnitOfWorks;
+global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
