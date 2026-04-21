@@ -9,5 +9,6 @@ namespace ASPCoreWebAPINewDemos.Services
         void UpdateCategory(CategoryPutDto category);
         void DeleteCategory(int id);
         CategoryGetDto GetCategory(int id);
+        int GetMax();
     }
 }

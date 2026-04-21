@@ -1,3 +1,4 @@
+using Microsoft.OpenApi.Models;
 
 namespace ASPCoreWebAPINewDemos
 {
@@ -6,6 +7,8 @@ namespace ASPCoreWebAPINewDemos
         // The main entry point of the application.
         public static void Main(string[] args)
         {
+            var myCors = "MyCors";
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -24,6 +27,7 @@ namespace ASPCoreWebAPINewDemos
             //This allows the application to use the UnitOfWork pattern for managing database transactions and operations.
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped(typeof(IExtraRepository<>), typeof(ExtraRepository<>));
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             // DI Services for Repositories and UnitOfWork
@@ -38,8 +42,42 @@ namespace ASPCoreWebAPINewDemos
             builder.Services.AddOpenApi();
             //Add Services to the container for Dependency Injection
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            //builder.Services.AddSwaggerGen();
 
+            //Configuration Swagger Doc 
+            builder.Services.AddSwaggerGen(doc =>
+            {
+                doc.SwaggerDoc("v1",
+                      new OpenApiInfo
+                      {
+                          Title = "Smart API For DEPI",
+                          Version = "v1",
+                          Description = " ASP .NET Core WebAPI Course ",
+                          TermsOfService = new Uri("http://tempuri.org/terms"),
+                          Contact = new OpenApiContact
+                          {
+                              Name = "Sayed Hawas",
+                              Email = "sout_2000@hotmail.com",
+                          },
+                      });
+
+                var filpath = Path.Combine(System.AppContext.BaseDirectory, "ApiDoc.xml");
+                doc.IncludeXmlComments(filpath);
+
+            });
+            // add Cors Option
+            builder.Services.AddCors(options => options.AddPolicy(myCors, CorsPolicyBuilder =>
+            {
+                CorsPolicyBuilder
+                                .AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader();
+
+            }));
+
+
+            //-------------------------------------------------------
+            //Add Meddelware for Exception Handling
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -56,8 +94,11 @@ namespace ASPCoreWebAPINewDemos
 
             app.UseAuthorization();
 
+            app.UseCors(myCors);
 
             app.MapControllers();
+
+            app.UseStaticFiles();
 
             app.Run();
         }
