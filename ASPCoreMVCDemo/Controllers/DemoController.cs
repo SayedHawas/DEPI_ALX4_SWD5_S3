@@ -2,6 +2,7 @@
 
 namespace ASPCoreMVCDemo.Controllers
 {
+    //
     public class DemoController : Controller
     {
         public ActionResult<string> Sayhello(string name)
@@ -29,7 +30,10 @@ namespace ASPCoreMVCDemo.Controllers
             return View("~/Views/MyView/SmartView.cshtml");
         }
 
-
+        public FileResult DownloadFile()
+        {
+            return File("Files/2.jpg", "application/text");
+        }
         public ActionResult Index()
         {
             return View();
