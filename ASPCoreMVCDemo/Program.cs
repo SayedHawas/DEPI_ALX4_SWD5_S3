@@ -1,3 +1,6 @@
+using ASPCoreMVCDemo.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace ASPCoreMVCDemo
 {
     public class Program
@@ -9,6 +12,11 @@ namespace ASPCoreMVCDemo
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            //Add Db context
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -27,7 +35,7 @@ namespace ASPCoreMVCDemo
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
+                pattern: "{controller=WebSite}/{action=Index}/{id?}")
                 .WithStaticAssets();
 
             app.Run();
