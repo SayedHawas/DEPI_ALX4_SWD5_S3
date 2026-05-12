@@ -38,5 +38,11 @@ namespace ASPCoreMVCDemo.Controllers
         {
             return View();
         }
+
+
+        public ActionResult ShowData()
+        {
+            return View();
+        }
     }
 }
